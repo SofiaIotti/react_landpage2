@@ -9,6 +9,19 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "tailwindcss": "^3.4.17",
     "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@heroui/link": "^2.2.16",
+    "@heroui/navbar": "^2.2.17",
+    "@heroui/system": "^2.4.15",
+    "@heroui/theme": "^2.4.15",
+    "@mui/material": "^7.1.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "framer-motion": "^12.12.1",
+    "react-dom": "^19.1.0"
   }
 }
