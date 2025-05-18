@@ -1,98 +1,58 @@
-
 import React from "react";
-import './style.css'
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@heroui/navbar";
-import{Link} from "@heroui/link"
-
+import "./style.css";
+import Slider from "../components/Slideshow";
+import MyNavbar from "/components/Navbar.jsx";
+import { Image, RangeCalendar, Card, CardBody } from "@heroui/react";
 
 function App() {
-  const CollectionSize = MyCollection.length;
-  const [index, setActiveStep] = React.useState(0);
-
-const goToNextPicture = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
   return (
-        <div className="App">
-         <Navbar>
-      <NavbarBrand>
-        
-        <p className="font-bold text-inherit">Ps Gallery</p>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#gallery">
-            Gallery
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
-          <h1>Welcome to my Landing Page</h1>
-          <div id="hero"></div>
-          <div id="gallery"></div>
-
-          <div
-            style={{
-                marginLeft: "40%",
-            }}
-        >
-            <h2>How to Create Image Slider in ReactJS?</h2>
-            <div
-                style={{
-                    maxWidth: 400,
-                    flexGrow: 1,
-                }}
-            >
-                <Paper
-                    square
-                    elevation={0}
-                    style={{
-                        height: 50,
-                        display: "flex",
-                        paddingLeft: theme.spacing(4),
-                        backgroundColor: theme.palette.background.default,
-                        alignItems: "center",
-                    }}
-                >
-                    <Typography>{MyCollection[index].label}</Typography>
-                </Paper>
-                <img
-                    src={MyCollection[index].imgPath}
-                    style={{
-                        height: 255,
-                        width: "100%",
-                        maxWidth: 400,
-                        display: "block",
-                        overflow: "hidden",
-                    }}
-                    alt={MyCollection[index].label}
-                />
-                <MobileStepper
-                    variant="text"
-                    position="static"
-                    index={index}
-                    steps={CollectionSize}
-                    nextButton={
-                        <Button
-                            size="small"
-                            onClick={goToNextPicture}
-                            disabled={index === CollectionSize - 1}
-                        >
-                            Next
-                            {theme.direction !== "rtl" ? (
-                                <KeyboardArrowRight />
-                            ) : (
-                                <KeyboardArrowLeft />
-                            )}
-                        </Button>
-                    }
-                />
+    <div className="App h-screen">
+      <MyNavbar />
+      <div className="body m-8">
+        <h1 className="text-xl">Welcome to my Landing Page</h1>
+        <div id="hero" className="mt-8">
+          <div className="hero-top flex">
+            <Image
+              alt="HeroUI hero Image"
+              src="./src/assets/img/img-7.jpg"
+              radius="sm"
+            />
+            <div className="flex gap-x-4">
+              <Card>
+                <RangeCalendar />
+              </Card>
             </div>
+          </div>
+          <div className="hero-bottom mt-4">
+            <Card shadow="md">
+              <CardBody>
+                <p className="text-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  eu neque rhoncus, gravida turpis ac, tempor lorem. Integer et
+                  convallis ex. Nulla ut est vel tortor hendrerit luctus.
+                  Praesent dignissim nunc lacus, eu lacinia est sagittis sed.
+                  Etiam rutrum efficitur enim, ac egestas elit auctor at. Morbi
+                  tempor elementum sem ut lobortis.
+                </p>
+              </CardBody>
+            </Card>
+          </div>
         </div>
+        <div id="gallery" className="mt-8 w-full">
+          <h2 className="text-xl mb-5">Slideshow</h2>
+          <Slider />
         </div>
-        
-    
+      </div>
+      <div className="footer relative py-5 px-8 bottom-0 ">
+        <h5 className="text-lg">Sofia Iotti</h5>
+        <p>sofiaiotti1998@gmail.com</p>
+        <p>
+          <a href="https://www.linkedin.com/in/sofia-iotti-8052ab213/">
+            Linkedin
+          </a>
+        </p>
+      </div>
+    </div>
   );
 }
 
