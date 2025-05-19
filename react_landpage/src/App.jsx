@@ -2,31 +2,32 @@ import React from "react";
 import "./style.css";
 import Slider from "../components/Slideshow";
 import MyNavbar from "/components/Navbar.jsx";
-import { Image, RangeCalendar, Card, CardBody } from "@heroui/react";
+import { Image, Calendar, Card, CardBody } from "@heroui/react";
+import { parseDate, CalendarDate } from '@internationalized/date';
 
 function App() {
+  const today = new Date();
+  const calendarDateToday = new CalendarDate(
+  today.getFullYear(),
+  today.getMonth() + 1, 
+  today.getDate()
+);
   return (
     <div className="App w-screen">
       <MyNavbar />
       <div className="body m-8">
         <h1 className="text-xl">Welcome to my Landing Page</h1>
-        <div id="hero" className="mt-8">
-          <div className="hero-top flex">
+        <div id="hero" className="mt-8 flex w-full">
+          <div className="hero-top flex flex-col md:flex-row justify-between w-full gap-4 mx-h-96">
             <Image
               alt="HeroUI hero Image"
-              src="./src/assets/img/img-7.jpg"
+              src="./src/assets/img/soap.jpg"
               radius="sm"
+              className="hero-image h-full flex-grow object-cover"
             />
-            <div className="flex gap-x-4">
-              <Card>
-                <RangeCalendar />
-              </Card>
-            </div>
-          </div>
-          <div className="hero-bottom mt-4">
-            <Card shadow="md">
+             <Card shadow="md" className="w-full md:w-1/2">
               <CardBody>
-                <p className="text-xs">
+                <p className="text-xs lg:text-base">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   eu neque rhoncus, gravida turpis ac, tempor lorem. Integer et
                   convallis ex. Nulla ut est vel tortor hendrerit luctus.
@@ -48,6 +49,7 @@ function App() {
                 </p>
               </CardBody>
             </Card>
+            <Calendar aria-label="Date (Uncontrolled)" defaultValue={calendarDateToday} className="hidden xl:block min-w-[256px]"/>
           </div>
         </div>
         <div id="gallery" className="mt-8 w-full">

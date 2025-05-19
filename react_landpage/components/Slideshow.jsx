@@ -43,7 +43,7 @@ export default function Slider() {
         {">"}
       </button>
     </div>
-    <div className="gallery-miniature flex w-full gap-2 mt-4">
+    <div className="gallery-miniature flex w-full gap-2 mt-8">
       {images.map((image, index)=> 
         <img
         key={index}
