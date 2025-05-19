@@ -2,13 +2,13 @@
 
 <h2>How to</h2>
 
-<p>Installa Node.js e npm</p>
+<strong>Installa Node.js e npm</strong>
 
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm 
 
-<p>Run npm</p>
+<strong>Run npm</strong>
 
 npm run dev
 
-<p>Segui le istruzioni da terminale.</p>
+<strong>Segui le istruzioni da terminale.</strong>
 <p>(Per esempio, collegati a http://localhost:5173/)</p>
