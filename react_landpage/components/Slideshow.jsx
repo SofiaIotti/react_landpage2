@@ -43,6 +43,20 @@ export default function Slider() {
         {">"}
       </button>
     </div>
+    <div className="gallery-miniature flex w-full gap-2 mt-4">
+      {images.map((image, index)=> 
+        <img
+        key={index}
+       className="image-miniatura"
+        src={image}
+        alt={`Miniatura ${index + 1}`}
+         onClick={() => {
+      setCurrentImage(index);
+      setZoomImage(true);
+    }}
+      />
+    )}
+    </div>
     {zoomImage && (
         <div
           className="background-zoom w-full h-screen flex items-center justify-center"

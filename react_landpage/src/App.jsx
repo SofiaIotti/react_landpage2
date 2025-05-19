@@ -6,7 +6,7 @@ import { Image, RangeCalendar, Card, CardBody } from "@heroui/react";
 
 function App() {
   return (
-    <div className="App h-screen">
+    <div className="App w-screen">
       <MyNavbar />
       <div className="body m-8">
         <h1 className="text-xl">Welcome to my Landing Page</h1>
@@ -27,6 +27,18 @@ function App() {
             <Card shadow="md">
               <CardBody>
                 <p className="text-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  eu neque rhoncus, gravida turpis ac, tempor lorem. Integer et
+                  convallis ex. Nulla ut est vel tortor hendrerit luctus.
+                  Praesent dignissim nunc lacus, eu lacinia est sagittis sed.
+                  Etiam rutrum efficitur enim, ac egestas elit auctor at. Morbi
+                  tempor elementum sem ut lobortis.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  eu neque rhoncus, gravida turpis ac, tempor lorem. Integer et
+                  convallis ex. Nulla ut est vel tortor hendrerit luctus.
+                  Praesent dignissim nunc lacus, eu lacinia est sagittis sed.
+                  Etiam rutrum efficitur enim, ac egestas elit auctor at. Morbi
+                  tempor elementum sem ut lobortis.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   eu neque rhoncus, gravida turpis ac, tempor lorem. Integer et
                   convallis ex. Nulla ut est vel tortor hendrerit luctus.

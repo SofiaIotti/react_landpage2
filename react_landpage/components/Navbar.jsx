@@ -1,6 +1,5 @@
 import React from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/react";
-import { Link } from "@heroui/link";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button } from "@heroui/react";
 
 export default function MyNavbar() {
   return (
@@ -8,12 +7,15 @@ export default function MyNavbar() {
       <NavbarBrand>
         <p className="font-bold text-inherit">Ps Gallery</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#gallery">
-            Gallery
-          </Link>
+          <Button variant="flat">
+            <a href="#gallery">
+            Guarda la Gallery
+            </a>
+          </Button>
         </NavbarItem>
+      
       </NavbarContent>
     </Navbar>
   );
